@@ -176,7 +176,7 @@ Feel free to reach out for:
 - Questions about my learning journey
 - Networking & knowledge sharing
 
-**Portfolio:** [https://awexa-web.github.io/My-Portfolio/](https://Awel-Abduljelil.github.io/My-Portfolio/)
+**Portfolio:** [https://Awel-Abduljelil.github.io/My-Portfolio/](https://Awel-Abduljelil.github.io/My-Portfolio/)
 
 ---
 
