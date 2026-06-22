@@ -8,7 +8,7 @@ I design and build secure systems with a focus on vulnerability assessment, pene
 
 ## 🚀 Quick Links
 
-- **Live Portfolio:** [Visit My Portfolio Website](https://awexa-web.github.io/My-Portfolio/)
+- **Live Portfolio:** [Visit My Portfolio Website](https://Awel-Abduljelil.github.io/My-Portfolio/)
 - **GitHub:** [@Awel-Abduljelil](https://github.com/Awel-Abduljelil)
 
 ---
