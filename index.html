@@ -1,52 +1,82 @@
 <!doctype html>
-
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awel Abduljelil — Software Engineer & Cybersecurity</title>
+    <title>Awel Abduljelil — Penetration Tester & Software Engineer</title>
+    <meta
+      name="description"
+      content="Awel Abduljelil — Software Engineer and Penetration Tester specializing in web security, vulnerability assessment, and CTF challenges. Available for security research and freelance pentesting work."
+    />
+
+    <!-- Prevent theme flash: set theme before CSS paints -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme = saved || "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
+    <link
+      rel="icon"
+      href="image/Awel logo with gradient arrow (1).png"
+      type="image/png"
+    />
     <link rel="stylesheet" href="style.css" />
 
     <!-- ----fonts--- -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P[...]
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200[...]
-      rel="stylesheet"
-    />
+
     <script
       src="https://kit.fontawesome.com/c89fa7c7ae.js"
       crossorigin="anonymous"
     ></script>
     <script src="script.js" defer></script>
   </head>
-
   <body id="home">
     <header>
-      <div>
+      <div class="brand">
         <img
           class="logo"
           src="image/Awel logo with gradient arrow (1).png"
           alt="Awel Abduljelil Logo"
         />
+        <span class="brand-name">Awel<span class="brand-dot">.</span>sec</span>
       </div>
 
-      <!-- hamburger button — shown on mobile -->
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-controls">
+        <!-- dark / light mode toggle -->
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle dark mode"
+          aria-pressed="true"
+          title="Toggle theme"
+        >
+          <i class="fa-solid fa-sun theme-icon theme-icon-sun"></i>
+          <i class="fa-solid fa-moon theme-icon theme-icon-moon"></i>
+        </button>
+
+        <!-- hamburger button — shown on mobile -->
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
 
       <nav class="navbar-links" id="navbarLinks">
         <ul>
-          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#About" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -60,11 +90,15 @@
     <main>
       <!-- ======= HERO ======= -->
       <section class="hero reveal">
+        <div class="hero-bg-grid" aria-hidden="true"></div>
+
         <div class="hero-text">
+          <p class="hero-eyebrow">
+            <span class="status-dot"></span> Available for security work
+          </p>
           <p class="hero-greeting">Hey there, I'm</p>
           <h1><span class="hero-span">Awel</span> Abduljelil</h1>
           <hr />
-          <!-- typing effect target -->
           <p class="hero-discripion">
             <span class="hero-span" id="typing-text"></span>
           </p>
@@ -73,12 +107,14 @@
             <a href="#contact" class="btn btn-outline">Contact Me</a>
           </div>
         </div>
-        <!-- subtle terminal decoration -->
+
+        <!-- terminal decoration -->
         <div class="hero-terminal" aria-hidden="true">
           <div class="terminal-bar">
             <span class="t-dot red"></span>
             <span class="t-dot yellow"></span>
             <span class="t-dot green"></span>
+            <span class="terminal-title">awel@astu: ~/portfolio</span>
           </div>
           <div class="terminal-body">
             <p>
@@ -86,14 +122,24 @@
                 >~</span
               >$ whoami
             </p>
-            <p class="t-out">software-engineering-student</p>
+            <p class="t-out">penetration-tester &amp; software-engineer</p>
             <p>
               <span class="t-green">awel@astu</span>:<span class="t-blue"
                 >~</span
-              >$ cat interests.txt
+              >$ cat focus.txt
             </p>
             <p class="t-out">
-              web-dev | cybersecurity | CTFs | problem-solving
+              web-security | vuln-assessment | CTFs | red-teaming
+            </p>
+            <p>
+              <span class="t-green">awel@astu</span>:<span class="t-blue"
+                >~</span
+              >$ nmap -sV status.me
+            </p>
+            <p class="t-out">PORT&nbsp;&nbsp;&nbsp;STATE&nbsp;&nbsp;SERVICE</p>
+            <p class="t-out">
+              open&nbsp;&nbsp;&nbsp;<span class="t-status">open</span
+              >&nbsp;&nbsp;&nbsp;hire-me.io
             </p>
             <p>
               <span class="t-green">awel@astu</span>:<span class="t-blue"
@@ -108,27 +154,38 @@
       <section id="About" class="about-section reveal">
         <div class="about-me-container">
           <div class="about-me-img">
-            <img class="profile-img" src="image/image2.jpg" alt="Awel Abduljelil" />
+            <img
+              class="profile-img"
+              src="image/image2.jpg"
+              alt="Awel Abduljelil"
+            />
+            <span class="profile-badge"
+              ><i class="fa-solid fa-shield-halved"></i
+            ></span>
           </div>
-
           <div class="about-me">
+            <p class="eyebrow-label">// about</p>
             <h2>About Me</h2>
             <p class="pragraph-about-me">
               I'm <span class="paragraph-span">Awel Abduljelil</span>, a
               <span class="paragraph-span">Software Engineering</span> student
-              at <abbr title="Adama Science and Technology University">ASTU</abbr>.
-              My primary focus is cybersecurity—specifically vulnerability assessment,
-              security testing, and risk analysis. I develop full-stack web applications
-              as a foundation to understand system architecture and identify security gaps
-              from both attacker and defender perspectives.
+              at
+              <abbr title="Adama Science and Technology University">ASTU</abbr>.
+              My primary focus is cybersecurity — specifically vulnerability
+              assessment, security testing, and risk analysis. I develop
+              full-stack web applications as a foundation to understand system
+              architecture and identify security gaps from both attacker and
+              defender perspectives.
             </p>
             <p class="pragraph-about-me">
-              I actively participate in Capture The Flag competitions and conduct security
-              research to deepen my expertise in threat modeling, exploitation techniques,
-              and defensive strategies. My approach combines hands-on penetration testing
-              with comprehensive vulnerability analysis to help organizations understand
-              and mitigate security risks. I'm committed to continuous learning and
-              mastering the technical depth required for professional security work.
+              I actively participate in Capture The Flag competitions and
+              conduct security research to deepen my expertise in threat
+              modeling, exploitation techniques, and defensive strategies. My
+              approach combines hands-on penetration testing with comprehensive
+              vulnerability analysis to help organizations understand and
+              mitigate security risks. I'm committed to continuous learning and
+              mastering the technical depth required for professional security
+              work.
             </p>
 
             <!-- social links -->
@@ -159,7 +216,7 @@
             <a
               href="#contact"
               class="btn btn-outline"
-              style="margin-top: 15px; display: inline-block"
+              style="margin-top: 18px; display: inline-block"
             >
               Get in touch
             </a>
@@ -169,84 +226,116 @@
 
       <!-- ======= SKILLS ======= -->
       <section id="skills" class="skills-section">
+        <p class="eyebrow-label light-eyebrow">// arsenal</p>
         <h2 class="section-title light-title">Skills &amp; Tools</h2>
-
         <div class="skills-container">
           <div class="card reveal">
-            <div class="card-icon"><i class="fa-solid fa-code"></i></div>
-            <h2>Frontend</h2>
-            <ul>
-              <li><i class="fa-brands fa-html5"></i> HTML</li>
-              <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-              <li><i class="fa-brands fa-js"></i> JavaScript</li>
-              <li><i class="fa-brands fa-react"></i> React (basics)</li>
-              <li>
-                <i class="fa-solid fa-mobile-screen"></i> Responsive Design
-              </li>
-            </ul>
+            <div class="card-header">
+              <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+              <h2>Frontend</h2>
+              <span class="card-count">5</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag"
+                ><i class="fa-brands fa-html5"></i>HTML</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-brands fa-css3-alt"></i>CSS</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-brands fa-js"></i>JavaScript</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-brands fa-react"></i>React</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-solid fa-mobile-screen"></i>Responsive
+                Design</span
+              >
+            </div>
           </div>
 
           <div class="card reveal">
-            <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
-            <h2>Programming</h2>
-            <ul>
-              <li><i class="fa-brands fa-python"></i> Python</li>
-              <li><i class="fa-solid fa-c"></i> C++</li>
-              <li><i class="fa-solid fa-java"></i> java(OOP)</li>
-              <li><i class="fa-solid fa-database"></i> MySQL basics</li>
-              <li><i class="fa-brands fa-node-js"></i> Node.js basics</li>
-            </ul>
+            <div class="card-header">
+              <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
+              <h2>Programming</h2>
+              <span class="card-count">5</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag"
+                ><i class="fa-brands fa-python"></i>Python</span
+              >
+              <span class="skill-tag"><i class="fa-solid fa-c"></i>C++</span>
+              <span class="skill-tag"
+                ><i class="fa-solid fa-java"></i>Java (OOP)</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-solid fa-database"></i>MySQL</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-brands fa-node-js"></i>Node.js</span
+              >
+            </div>
           </div>
 
           <!-- Cybersecurity -->
           <div class="card reveal">
-            <div class="card-icon">
-              <i class="fa-solid fa-shield-halved"></i>
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h2>Cybersecurity</h2>
+              <span class="card-count card-count-accent">5</span>
             </div>
-            <h2>Cybersecurity</h2>
-            <ul>
-              <li><i class="fa-brands fa-linux"></i> Linux</li>
-              <li><i class="fa-solid fa-globe"></i> Web Security basics</li>
-              <li><i class="fa-solid fa-flag"></i> CTF Solving</li>
-              <li>
-                <i class="fa-solid fa-network-wired"></i> Networking
-                fundamentals
-              </li>
-              <li><i class="fa-solid fa-user-secret"></i> Basic Pentesting</li>
-            </ul>
+            <div class="skill-tags">
+              <span class="skill-tag skill-tag-accent"
+                ><i class="fa-brands fa-linux"></i>Linux</span
+              >
+              <span class="skill-tag skill-tag-accent"
+                ><i class="fa-solid fa-globe"></i>Web Security</span
+              >
+              <span class="skill-tag skill-tag-accent"
+                ><i class="fa-solid fa-flag"></i>CTF Solving</span
+              >
+              <span class="skill-tag skill-tag-accent"
+                ><i class="fa-solid fa-network-wired"></i>Networking</span
+              >
+              <span class="skill-tag skill-tag-accent"
+                ><i class="fa-solid fa-user-secret"></i>Pentesting</span
+              >
+            </div>
           </div>
 
           <!-- Tools -->
           <div class="card reveal">
-            <div class="card-icon">
-              <i class="fa-solid fa-screwdriver-wrench"></i>
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <h2>Tools</h2>
+              <span class="card-count">4</span>
             </div>
-            <h2>Tools</h2>
-            <ul>
-              <li><i class="fa-brands fa-git-alt"></i> Git</li>
-              <li><i class="fa-brands fa-github"></i> GitHub</li>
-              <li><i class="fa-solid fa-laptop-code"></i> VS Code</li>
-              <li><i class="fa-solid fa-terminal"></i> Linux Terminal</li>
-            </ul>
-          </div>
-
-          <!-- Hobbies -->
-          <div class="card reveal">
-            <div class="card-icon"><i class="fa-solid fa-star"></i></div>
-            <h2>Hobbies</h2>
-            <ul>
-              <li><i class="fa-solid fa-book"></i> Reading books</li>
-              <li><i class="fa-solid fa-futbol"></i> Playing football</li>
-              <li><i class="fa-solid fa-user-secret"></i> Ethical hacking</li>
-              <li><i class="fa-solid fa-lightbulb"></i> Learning new tech</li>
-              <li><i class="fa-solid fa-flag"></i> Solving challenges</li>
-            </ul>
+            <div class="skill-tags">
+              <span class="skill-tag"
+                ><i class="fa-brands fa-git-alt"></i>Git</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-brands fa-github"></i>GitHub</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-solid fa-laptop-code"></i>VS Code</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-solid fa-terminal"></i>Linux Terminal</span
+              >
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ======= PROJECTS ======= -->
       <section id="projects" class="projects-section">
+        <p class="eyebrow-label">// builds</p>
         <h2 class="section-title">Projects</h2>
         <p class="section-subtitle">
           Things I've built while learning — each one taught me something real.
@@ -297,7 +386,10 @@
               >
                 <i class="fa-brands fa-github"></i> GitHub
               </a>
-              <a href="#https://github.com/awexa-web/Login-Auth-System" class="btn btn-sm btn-primary">
+              <a
+                href="https://github.com/awexa-web/Login-Auth-System"
+                class="btn btn-sm btn-primary"
+              >
                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
               </a>
             </div>
@@ -372,7 +464,10 @@
               >
                 <i class="fa-brands fa-github"></i> GitHub
               </a>
-              <a href="https://github.com/awexa-web/CTF-helper-scripts" class="btn btn-sm btn-primary">
+              <a
+                href="https://github.com/awexa-web/CTF-helper-scripts"
+                class="btn btn-sm btn-primary"
+              >
                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
               </a>
             </div>
@@ -405,8 +500,9 @@
         </div>
       </section>
 
-      <!-- ======= CTF  ======= -->
+      <!-- ======= CTF ======= -->
       <section id="ctf-journey" class="ctf-section reveal">
+        <p class="eyebrow-label">// track record</p>
         <h2 class="section-title">Cybersecurity Journey</h2>
         <p class="section-subtitle">
           How I've been building my security skills, step by step.
@@ -453,8 +549,8 @@
             <p>
               Took part in UNIVERSITY CTF and other university-level
               cybersecurity challenges. These are a great way to learn alongside
-              peers and see how others approach the same problems. and I score
-              good points in the competition.
+              peers and see how others approach the same problems — and I scored
+              well in the competition.
             </p>
           </div>
         </div>
@@ -478,6 +574,7 @@
 
       <!-- ======= SERVICES ======= -->
       <section id="services" class="services reveal">
+        <p class="eyebrow-label">// what I offer</p>
         <h2 class="section-title">Services</h2>
         <p class="section-subtitle">
           What I can help with right now as a student developer.
@@ -515,6 +612,7 @@
 
       <!-- ======= CONTACT ======= -->
       <section id="contact" class="contact reveal">
+        <p class="eyebrow-label">// get in touch</p>
         <h2 class="section-title">Contact Me</h2>
         <p class="section-subtitle">
           Got a project idea, a question, or just want to say hi? Feel free to
@@ -593,8 +691,6 @@
           </fieldset>
         </form>
       </section>
-
-      <br /><br />
     </main>
     <!-- /main -->
 
@@ -606,10 +702,7 @@
         alt="Awel logo"
       />
       <h4>Awel Abduljelil</h4>
-      <p class="footer-tagline">
-        Software Engineer &amp; Cybersecurity Enthusiast
-      </p>
-
+      <p class="footer-tagline">Software Engineer &amp; Penetration Tester</p>
       <div class="footer-socials">
         <a
           href="https://www.x.com/Aweljelil49555"
@@ -629,7 +722,6 @@
           <i class="fa-brands fa-github"></i>
         </a>
       </div>
-
       <p class="footer-paragraph">
         &copy; 2026 Awel Abduljelil. All rights reserved.
       </p>
