@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awel Abduljelil — Penetration Tester & Software Engineer</title>
+    <meta name="description" content="Awel Abduljelil — Software Engineer and Penetration Tester specializing in web security, vulnerability assessment, and CTF challenges." />
+
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme = saved || "dark";
+        document.documentElement.classList.toggle("light", theme === "light");
+        document.documentElement.classList.toggle("dark", theme === "dark");
+      })();
+    </script>
+
+    <link rel="icon" href="/image/logo.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
