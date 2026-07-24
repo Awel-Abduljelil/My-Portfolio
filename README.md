@@ -26,6 +26,6 @@ Drop these into `public/image/`:
 
 ## Deploying to GitHub Pages
 1. `npm install -D gh-pages`
-2. Add to `package.json`: `"homepage": "https://<username>.github.io/<repo>"` and a script `"deploy": "gh-pages -d dist"`
-3. In `vite.config.js`, set `base: "/<repo-name>/"` inside `defineConfig({...})`
+2. Add to `package.json`: `"homepage": "https://Awel-Abduljelil.github.io/My-Portfolio"` and a script `"deploy": "gh-pages -d dist"`
+3. In `vite.config.js`, set `base: "/My-Portfolio/"` inside `defineConfig({...})`
 4. `npm run build && npm run deploy`
